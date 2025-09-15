@@ -6,13 +6,13 @@ import "./globals.css";
 
 const overlock = Overlock({
   variable: "--font-overlock",
-  subsets: ["latin"],
+  fallback: ["Arial", "Helvetica", "sans-serif"],
   weight: ["400"],
 });
 
 const mozillaHeadline = Mozilla_Headline({
   variable: "--font-mozilla-headline",
-  subsets: ["latin"],
+  fallback: ["Arial", "Helvetica", "sans-serif"],
   weight: ["400"],
 });
 
