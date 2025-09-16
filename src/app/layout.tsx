@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import { Overlock, Mozilla_Headline } from "next/font/google";
 
+import { Footer } from "@/components";
+
 import "./globals.css";
 
 const overlock = Overlock({
@@ -31,7 +33,10 @@ export default function RootLayout({
       lang="en"
       className={`${overlock.variable} ${mozillaHeadline.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
