@@ -31,6 +31,16 @@ li {
   list-style: none;
 }
 
+p {
+  font-family: var(--font-mozilla-headline);
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 6rem;
+  font-weight: 400;
+}
+
 .container {
   max-width: 192rem;
   margin: 0 auto;
@@ -38,6 +48,18 @@ li {
 }
 
 @media (max-width: 728px) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  p {
+    line-height: 1.4;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
   .container {
     padding: 0 2rem;
   }
