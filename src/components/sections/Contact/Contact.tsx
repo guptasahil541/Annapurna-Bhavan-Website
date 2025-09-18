@@ -1,4 +1,7 @@
 import classNames from "classnames";
+
+import { CTA } from "@/components/ui";
+
 import styles from "./Contact.module.css";
 
 export const Contact = () => {
@@ -39,6 +42,7 @@ export const Contact = () => {
                   11:30 AM - 11:00 PM (Last walk-in - 10:15 PM)
                 </p>
               </div>
+              <CTA />
             </div>
           </div>
         </div>

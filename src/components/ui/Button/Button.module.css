@@ -1,0 +1,79 @@
+.default_button {
+  font-family: var(--font-overlock);
+  padding: 1.5rem 3rem;
+  font-size: 2rem;
+  width: max-content;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out all;
+}
+
+.red_button {
+  background-color: var(--red);
+  color: var(--yellow);
+  border: 1.5px solid var(--red);
+}
+
+.red_outline_button {
+  background-color: transparent;
+  color: var(--red);
+  border: 1.5px solid var(--red);
+}
+
+.dark_red_button {
+  background-color: var(--foreground);
+  color: var(--yellow);
+  border: 1.5px solid var(--foreground);
+}
+
+.dark_red_outline_button {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1.5px solid var(--foreground);
+}
+
+.yellow_outline_button {
+  background-color: transparent;
+  color: var(--yellow);
+  border: 1.5px solid var(--yellow);
+}
+
+.partial_radius_button {
+  border-radius: 1rem;
+}
+
+.full_radius_button {
+  border-radius: 3rem;
+}
+
+.red_button:hover {
+  background-color: var(--foreground);
+  border-color: var(--foreground);
+}
+
+.red_outline_button:hover {
+  background-color: var(--red);
+  color: var(--yellow);
+}
+
+.dark_red_button:hover {
+  background-color: var(--dark-red);
+  border-color: var(--dark-red);
+}
+
+.dark_red_outline_button:hover {
+  background-color: var(--foreground);
+  color: var(--yellow);
+}
+
+.yellow_outline_button:hover {
+  background-color: var(--yellow);
+  color: var(--foreground);
+}
+
+@media (max-width: 728px) {
+  .default_button {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+  }
+}

@@ -1,6 +1,6 @@
 #menu_highlights {
-  background-color: #032325;
-  color: #fffdcf;
+  background-color: var(--green);
+  color: var(--yellow);
   padding: 15rem 0;
   display: flex;
   flex-direction: column;
