@@ -1,5 +1,7 @@
 import classNames from "classnames";
 
+import { CTA } from "@/components/ui";
+
 import styles from "./About.module.css";
 
 export const About = () => {
@@ -30,6 +32,7 @@ export const About = () => {
               slightly believable.
             </p>
           </div>
+          <CTA />
         </div>
         <div className={styles.image_container}></div>
       </div>

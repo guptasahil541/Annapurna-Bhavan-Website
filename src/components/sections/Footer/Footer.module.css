@@ -1,6 +1,6 @@
 #footer {
-  background-color: #032325;
-  color: #fffdcf;
+  background-color: var(--green);
+  color: var(--yellow);
   padding-top: 6rem;
 }
 
