@@ -14,11 +14,6 @@
   gap: 5rem;
 }
 
-.menu_categories_container {
-  display: flex;
-  gap: 1rem;
-}
-
 @media (max-width: 728px) {
   #menu_highlights {
     padding: 8rem 0;
