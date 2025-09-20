@@ -19,7 +19,7 @@
 }
 
 .info {
-  color: #620e0e;
+  color: var(--brown);
 }
 
 .contact_info_outer_container {
