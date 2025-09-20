@@ -24,15 +24,11 @@ export const QUICK_LINKS = [
 export const MENU_LINKS = [
   {
     name: "Food",
-    path: "/",
+    path: "/menu/food",
   },
   {
     name: "Drinks",
-    path: "/",
-  },
-  {
-    name: "Bar",
-    path: "/",
+    path: "/menu/drinks",
   },
 ];
 

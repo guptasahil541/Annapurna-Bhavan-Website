@@ -1,8 +1,9 @@
 "use client";
 
-import { MenuProps } from "./types";
+import { MenuProps, menuVariants } from "./types";
 
 import { useState, useMemo } from "react";
+import classNames from "classnames";
 
 import { Button } from "@/components";
 
@@ -13,6 +14,10 @@ export const Menu: React.FC<MenuProps> = ({
   categories,
   defaultCategory,
   limit = items.length,
+  buttonFill,
+  buttonBorderRadius,
+  fill,
+  ...props
 }) => {
   const [currentCategory, setCurrentCategory] = useState(defaultCategory);
 
@@ -23,15 +28,18 @@ export const Menu: React.FC<MenuProps> = ({
   );
 
   return (
-    <>
+    <div
+      className={classNames(styles.menu_container, menuVariants({ fill }))}
+      {...props}
+    >
       <div className={styles.menu_categories_container}>
         {Object.values(categories).map((category, index) => {
           return (
             <Button
               onClick={() => setCurrentCategory(category)}
               data-selected={category === currentCategory}
-              fill="yellowOutline"
-              borderRadius="full"
+              buttonFill={buttonFill}
+              buttonBorderRadius={buttonBorderRadius}
               className={styles.menu_category}
               key={index}
             >
@@ -55,6 +63,6 @@ export const Menu: React.FC<MenuProps> = ({
           );
         })}
       </div>
-    </>
+    </div>
   );
 };

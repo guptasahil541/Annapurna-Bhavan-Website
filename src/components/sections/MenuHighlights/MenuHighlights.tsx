@@ -20,8 +20,11 @@ export const MenuHighlights = () => {
           categories={FOOD_MENU_CATEGORIES}
           defaultCategory={FOOD_MENU_CATEGORIES.APPETIZERS}
           limit={8}
+          buttonFill="yellowOutline"
+          buttonBorderRadius="full"
+          fill="yellow"
         />
-        <Button fill="yellowOutline">View menu</Button>
+        <Button buttonFill="yellowOutline">View menu</Button>
       </div>
     </section>
   );

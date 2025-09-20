@@ -5,13 +5,16 @@ import { ButtonProps, buttonVariants } from "./types";
 
 export const Button: FC<ButtonProps> = ({
   className,
-  fill,
-  borderRadius,
+  buttonFill,
+  buttonBorderRadius,
   ...props
 }) => {
   return (
     <button
-      className={classNames(className, buttonVariants({ fill, borderRadius }))}
+      className={classNames(
+        className,
+        buttonVariants({ buttonFill, buttonBorderRadius })
+      )}
       {...props}
     />
   );

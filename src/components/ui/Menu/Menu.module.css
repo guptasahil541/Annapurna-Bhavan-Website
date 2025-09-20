@@ -1,3 +1,9 @@
+.menu_container {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
 .menu_categories_container {
   display: flex;
   flex-wrap: wrap;
@@ -36,7 +42,6 @@
 .menu_item_container::before {
   content: "";
   position: absolute;
-  background-color: #335760;
   height: 100vh;
   width: 2px;
   top: 0;
@@ -45,6 +50,31 @@
 
 .menu_item {
   width: 75%;
+}
+
+.red_menu .menu_item_container::before {
+  background-color: #e0c8bc;
+}
+
+.red_menu .menu_item_and_price_container {
+  color: var(--foreground);
+}
+
+.red_menu .menu_item_description {
+  color: var(--brown);
+}
+
+.yellow_menu .menu_item_container::before {
+  background-color: #335760;
+}
+
+.yellow_menu .menu_item_and_price_container {
+  color: var(--yellow);
+}
+
+.yellow_menu .menu_item_description {
+  color: var(--yellow);
+  opacity: 0.6;
 }
 
 @media (max-width: 728px) {
