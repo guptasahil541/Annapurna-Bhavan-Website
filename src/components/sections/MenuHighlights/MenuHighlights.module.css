@@ -1,7 +1,6 @@
 #menu_highlights {
   background-color: var(--green);
   color: var(--yellow);
-  padding: 15rem 0;
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -12,10 +11,4 @@
   display: flex;
   flex-direction: column;
   gap: 5rem;
-}
-
-@media (max-width: 728px) {
-  #menu_highlights {
-    padding: 8rem 0;
-  }
 }

@@ -6,7 +6,7 @@ import styles from "./Contact.module.css";
 
 export const Contact = () => {
   return (
-    <section id={styles.contact}>
+    <section id={styles.contact} className="vertical_padding">
       <div className={classNames("container", styles.contact_container)}>
         <div className={styles.content_container}>
           <h2>Get in touch</h2>

@@ -6,8 +6,8 @@ import styles from "./About.module.css";
 
 export const About = () => {
   return (
-    <section id={styles.about}>
-      <div className={classNames("container", styles.about_container)}>
+    <section id={styles.about} className="vertical_padding">
+      <div className={classNames("container ", styles.about_container)}>
         <div className={styles.content_container}>
           <h2>About the restaurant</h2>
           <div className={styles.text_container}>

@@ -1,7 +1,3 @@
-#contact {
-  padding: 15rem 0;
-}
-
 .contact_container {
   display: flex;
   justify-content: space-between;
@@ -58,10 +54,6 @@
 }
 
 @media (max-width: 728px) {
-  #contact {
-    padding: 8rem 0;
-  }
-
   .contact_container {
     gap: 5rem;
   }
