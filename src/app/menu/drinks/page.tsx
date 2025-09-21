@@ -5,7 +5,10 @@ import { Menu } from "@/components";
 
 import styles from "../page.module.css";
 
-import { FOOD_MENU_ITEMS, FOOD_MENU_CATEGORIES } from "@/constants/foodMenu";
+import {
+  DRINKS_MENU_ITEMS,
+  DRINKS_MENU_CATEGORIES,
+} from "@/constants/drinksMenu";
 
 export default function DrinksMenu() {
   return (
@@ -23,9 +26,9 @@ export default function DrinksMenu() {
       <section id={styles.menu}>
         <div className={classNames("container")}>
           <Menu
-            items={FOOD_MENU_ITEMS}
-            categories={FOOD_MENU_CATEGORIES}
-            defaultCategory={FOOD_MENU_CATEGORIES.APPETIZERS}
+            items={DRINKS_MENU_ITEMS}
+            categories={DRINKS_MENU_CATEGORIES}
+            defaultCategory={DRINKS_MENU_CATEGORIES.BEVERAGES}
             buttonFill="darkRedOutline"
             buttonBorderRadius="full"
           />
