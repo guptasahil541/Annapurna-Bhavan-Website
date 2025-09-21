@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-import { CTA } from "@/components/ui";
+import { CTA, GoogleMap } from "@/components/ui";
 
 import styles from "./Contact.module.css";
 
@@ -45,6 +45,9 @@ export const Contact = () => {
               <CTA />
             </div>
           </div>
+        </div>
+        <div className={styles.map_container}>
+          <GoogleMap />
         </div>
       </div>
     </section>

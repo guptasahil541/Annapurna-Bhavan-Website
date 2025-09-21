@@ -4,6 +4,7 @@
 
 .contact_container {
   display: flex;
+  justify-content: space-between;
 }
 
 .content_container {
@@ -40,9 +41,29 @@
   gap: 3rem;
 }
 
+.map_container {
+  width: 60rem;
+  background-color: aliceblue;
+}
+
+@media (max-width: 1024px) {
+  .contact_container {
+    flex-direction: column;
+    gap: 10rem;
+  }
+
+  .map_container {
+    width: 100%;
+  }
+}
+
 @media (max-width: 728px) {
   #contact {
     padding: 8rem 0;
+  }
+
+  .contact_container {
+    gap: 5rem;
   }
 
   .text_container {
