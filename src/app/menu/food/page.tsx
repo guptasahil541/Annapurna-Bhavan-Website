@@ -20,7 +20,7 @@ export default function FoodMenu() {
           className={styles.hero_image}
         />
       </section>
-      <section id={styles.menu}>
+      <section id={styles.menu} className="vertical_padding">
         <div className={classNames("container")}>
           <Menu
             items={FOOD_MENU_ITEMS}

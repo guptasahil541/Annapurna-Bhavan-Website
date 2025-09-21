@@ -23,7 +23,7 @@ export default function DrinksMenu() {
           className={styles.hero_image}
         />
       </section>
-      <section id={styles.menu}>
+      <section id={styles.menu} className="vertical_padding">
         <div className={classNames("container")}>
           <Menu
             items={DRINKS_MENU_ITEMS}

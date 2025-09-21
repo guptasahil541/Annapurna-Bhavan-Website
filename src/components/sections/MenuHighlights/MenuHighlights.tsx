@@ -8,7 +8,7 @@ import { FOOD_MENU_CATEGORIES, FOOD_MENU_ITEMS } from "@/constants/foodMenu";
 
 export const MenuHighlights = () => {
   return (
-    <section id={styles.menu_highlights}>
+    <section id={styles.menu_highlights} className="vertical_padding">
       <div
         className={classNames("container", styles.menu_hightlights_container)}
       >

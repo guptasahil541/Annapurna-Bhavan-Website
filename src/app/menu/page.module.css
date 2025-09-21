@@ -8,13 +8,3 @@
   width: 100%;
   object-fit: cover;
 }
-
-#menu {
-  padding: 15rem 0;
-}
-
-@media (max-width: 728px) {
-  #menu {
-    padding: 8rem 0;
-  }
-}
