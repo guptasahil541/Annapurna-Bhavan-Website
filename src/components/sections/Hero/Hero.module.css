@@ -1,0 +1,38 @@
+#hero {
+  height: 100svh;
+  position: relative;
+}
+
+.hero_image_container {
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hero_image {
+  position: relative;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.hero_image_container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(20, 0, 0, 0.7) 15%, rgba(0, 0, 0, 0) 100%);
+}
+
+.hero_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(4rem, 3.5vw, 6rem);
+}
