@@ -1,15 +1,44 @@
 .about_container {
   display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 4vw, 10rem);
 }
 
 .content_container {
   display: flex;
+  gap: clamp(3rem, 7vw, 25rem);
+  justify-content: space-between;
+}
+
+.text_content_container {
+  display: flex;
   flex-direction: column;
-  gap: 5rem;
+  justify-content: center;
+  gap: clamp(3rem, 4vw, 10rem);
+  max-width: 40%;
 }
 
 .text_container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.about_image {
+  height: 100%;
+  width: 60rem;
+}
+
+@media (max-width: 1024px) {
+  .content_container {
+    flex-direction: column;
+  }
+
+  .text_content_container {
+    max-width: 100%;
+  }
+
+  .about_image {
+    width: 100%;
+  }
 }

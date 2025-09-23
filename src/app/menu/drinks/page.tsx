@@ -25,13 +25,16 @@ export default function DrinksMenu() {
         />
       </section>
       <section id={styles.menu} className="vertical_padding">
-        <div className={classNames("container")}>
+        <div className={classNames("container", styles.menu_container)}>
           <Menu
             items={DRINKS_MENU_ITEMS}
             categories={DRINKS_MENU_CATEGORIES}
             defaultCategory={DRINKS_MENU_CATEGORIES.BEVERAGES}
             buttonFill="darkRedOutline"
             buttonBorderRadius="full"
+            ctaButtonFill="red"
+            ctaButtonLink="/book-a-table"
+            ctaButtonText="Book a table"
           />
         </div>
         <ImageGallery images={DRINK_IMAGES} />

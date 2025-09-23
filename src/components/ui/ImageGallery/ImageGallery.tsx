@@ -69,6 +69,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
       <div
         ref={imageGalleryRefTwo}
         className={styles.image_gallery_inner_container}
+        aria-hidden
       >
         {images.map((image, index) => {
           return (

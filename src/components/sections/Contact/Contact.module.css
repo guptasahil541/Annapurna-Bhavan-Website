@@ -1,18 +1,20 @@
 .contact_container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: clamp(3rem, 4vw, 10rem);
 }
 
 .content_container {
   display: flex;
-  flex-direction: column;
-  gap: 5rem;
+  gap: clamp(3rem, 7vw, 25rem);
+  justify-content: space-between;
 }
 
 .text_container {
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  justify-content: center;
+  gap: clamp(2rem, 4vw, 10rem);
 }
 
 .info {
@@ -22,7 +24,7 @@
 .contact_info_outer_container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .contact_info_inner_container {
@@ -31,46 +33,20 @@
   gap: 1rem;
 }
 
-.restaurant_timings_container {
+.restaurant_timings_outer_container {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.map_container {
-  width: 60rem;
-  background-color: aliceblue;
+.restaurant_timings_inner_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 @media (max-width: 1024px) {
-  .contact_container {
+  .content_container {
     flex-direction: column;
-    gap: 10rem;
-  }
-
-  .map_container {
-    width: 100%;
-  }
-}
-
-@media (max-width: 728px) {
-  .contact_container {
-    gap: 5rem;
-  }
-
-  .text_container {
-    gap: 5rem;
-  }
-
-  .contact_info_outer_container {
-    gap: 2rem;
-  }
-
-  .contact_info_inner_container {
-    gap: 0.5rem;
-  }
-
-  .restaurant_timings_container {
-    gap: 2rem;
   }
 }
