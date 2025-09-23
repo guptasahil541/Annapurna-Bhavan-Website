@@ -8,6 +8,7 @@ import classNames from "classnames";
 import { Button } from "@/components";
 
 import styles from "./Menu.module.css";
+import Link from "next/link";
 
 export const Menu: React.FC<MenuProps> = ({
   items,
@@ -17,6 +18,9 @@ export const Menu: React.FC<MenuProps> = ({
   buttonFill,
   buttonBorderRadius,
   fill,
+  ctaButtonFill,
+  ctaButtonLink,
+  ctaButtonText,
   ...props
 }) => {
   const [currentCategory, setCurrentCategory] = useState(defaultCategory);
@@ -32,37 +36,42 @@ export const Menu: React.FC<MenuProps> = ({
       className={classNames(styles.menu_container, menuVariants({ fill }))}
       {...props}
     >
-      <div className={styles.menu_categories_container}>
-        {Object.values(categories).map((category, index) => {
-          return (
-            <Button
-              onClick={() => setCurrentCategory(category)}
-              data-selected={category === currentCategory}
-              buttonFill={buttonFill}
-              buttonBorderRadius={buttonBorderRadius}
-              className={styles.menu_category}
-              key={index}
-            >
-              {category}
-            </Button>
-          );
-        })}
-      </div>
-      <div className={styles.menu_items_container}>
-        {menuItems.map((menuItem, index) => {
-          return (
-            <div className={styles.menu_item_container} key={index}>
-              <div className={styles.menu_item_and_price_container}>
-                <p className={styles.menu_item}>{menuItem.item}</p>
-                <p className={styles.menu_item_price}>{menuItem.price}</p>
+      <div className={styles.menu_inner_container}>
+        <div className={styles.menu_categories_container}>
+          {Object.values(categories).map((category, index) => {
+            return (
+              <Button
+                onClick={() => setCurrentCategory(category)}
+                data-selected={category === currentCategory}
+                buttonFill={buttonFill}
+                buttonBorderRadius={buttonBorderRadius}
+                className={styles.menu_category}
+                key={index}
+              >
+                {category}
+              </Button>
+            );
+          })}
+        </div>
+        <div className={styles.menu_items_container}>
+          {menuItems.map((menuItem, index) => {
+            return (
+              <div className={styles.menu_item_container} key={index}>
+                <div className={styles.menu_item_and_price_container}>
+                  <p className={styles.menu_item}>{menuItem.item}</p>
+                  <p className={styles.menu_item_price}>{menuItem.price}</p>
+                </div>
+                <p className={styles.menu_item_description}>
+                  {menuItem.description}
+                </p>
               </div>
-              <p className={styles.menu_item_description}>
-                {menuItem.description}
-              </p>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
+      <Link href={ctaButtonLink}>
+        <Button buttonFill={ctaButtonFill}>{ctaButtonText}</Button>
+      </Link>
     </div>
   );
 };

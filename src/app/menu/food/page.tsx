@@ -22,13 +22,16 @@ export default function FoodMenu() {
         />
       </section>
       <section id={styles.menu} className="vertical_padding">
-        <div className={classNames("container")}>
+        <div className={classNames("container", styles.menu_container)}>
           <Menu
             items={FOOD_MENU_ITEMS}
             categories={FOOD_MENU_CATEGORIES}
             defaultCategory={FOOD_MENU_CATEGORIES.APPETIZERS}
             buttonFill="darkRedOutline"
             buttonBorderRadius="full"
+            ctaButtonFill="red"
+            ctaButtonLink="/book-a-table"
+            ctaButtonText="Book a table"
           />
         </div>
         <ImageGallery images={FOOD_IMAGES} />

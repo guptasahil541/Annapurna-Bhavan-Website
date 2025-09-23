@@ -13,7 +13,7 @@
 .gallery_image {
   flex-shrink: 0;
   flex-grow: 0;
-  object-fit: cover;
   height: clamp(25rem, 20vw, 80rem);
   width: clamp(25rem, 20vw, 80rem);
+  border-radius: 2rem;
 }

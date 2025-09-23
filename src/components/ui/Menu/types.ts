@@ -40,4 +40,7 @@ export interface MenuProps
   categories: Categories;
   defaultCategory: Category;
   limit?: number;
+  ctaButtonFill: ButtonVariants["buttonFill"];
+  ctaButtonLink: string;
+  ctaButtonText: string;
 }
