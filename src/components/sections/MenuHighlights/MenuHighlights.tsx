@@ -1,10 +1,11 @@
 import classNames from "classnames";
 
-import { Button, Menu } from "@/components/ui";
+import { Button, Menu, ImageGallery } from "@/components/ui";
 
 import styles from "./MenuHighlights.module.css";
 
 import { FOOD_MENU_CATEGORIES, FOOD_MENU_ITEMS } from "@/constants/foodMenu";
+import { FOOD_IMAGES } from "@/constants/gallery";
 
 export const MenuHighlights = () => {
   return (
@@ -26,6 +27,7 @@ export const MenuHighlights = () => {
         />
         <Button buttonFill="yellowOutline">View menu</Button>
       </div>
+      <ImageGallery images={FOOD_IMAGES} />
     </section>
   );
 };
