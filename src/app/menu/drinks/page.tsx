@@ -1,7 +1,7 @@
 import Image from "next/image";
 import classNames from "classnames";
 
-import { Menu } from "@/components";
+import { ImageGallery, Menu } from "@/components";
 
 import styles from "../page.module.css";
 
@@ -9,6 +9,7 @@ import {
   DRINKS_MENU_ITEMS,
   DRINKS_MENU_CATEGORIES,
 } from "@/constants/drinksMenu";
+import { DRINK_IMAGES } from "@/constants/gallery";
 
 export default function DrinksMenu() {
   return (
@@ -33,6 +34,7 @@ export default function DrinksMenu() {
             buttonBorderRadius="full"
           />
         </div>
+        <ImageGallery images={DRINK_IMAGES} />
       </section>
     </main>
   );

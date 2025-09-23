@@ -1,11 +1,12 @@
 import Image from "next/image";
 import classNames from "classnames";
 
-import { Menu } from "@/components";
+import { ImageGallery, Menu } from "@/components";
 
 import styles from "../page.module.css";
 
 import { FOOD_MENU_ITEMS, FOOD_MENU_CATEGORIES } from "@/constants/foodMenu";
+import { FOOD_IMAGES } from "@/constants/gallery";
 
 export default function FoodMenu() {
   return (
@@ -30,6 +31,7 @@ export default function FoodMenu() {
             buttonBorderRadius="full"
           />
         </div>
+        <ImageGallery images={FOOD_IMAGES} />
       </section>
     </main>
   );
