@@ -13,6 +13,7 @@
 .footer_top_container {
   display: flex;
   justify-content: space-between;
+  gap: 3rem;
 }
 
 .footer_navigation_outer_container {
