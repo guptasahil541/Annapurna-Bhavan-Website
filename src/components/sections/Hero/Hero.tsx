@@ -15,6 +15,7 @@ export const Hero = () => {
           width={1920}
           height={1080}
           className={styles.hero_image}
+          priority
         />
       </div>
       <div className={classNames("container", styles.hero_container)}>

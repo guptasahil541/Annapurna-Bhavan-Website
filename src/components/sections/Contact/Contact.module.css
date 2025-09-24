@@ -21,6 +21,10 @@
   color: var(--brown);
 }
 
+.info a:hover {
+  text-decoration: underline;
+}
+
 .contact_info_outer_container {
   display: flex;
   flex-direction: column;
