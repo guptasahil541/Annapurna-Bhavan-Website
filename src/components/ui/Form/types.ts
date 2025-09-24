@@ -1,6 +1,6 @@
 import z from "zod";
 
-import { RESTAURANT_TIMINGS } from "@/constants/timings";
+import { RESTAURANT_TIMINGS } from "@/constants/contact";
 
 export const formSchema = z.object({
   firstName: z.string().min(3, { error: "Minimum 3 letters required" }),

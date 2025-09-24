@@ -1,3 +1,11 @@
+export const CONTACT_INFO = {
+  EMAIL: "annapurnabhavan@yahoo.com",
+  PHONE: "212-981-7000",
+  ADDRESS:
+    "615 9th Avenue (Between 43rd & 44th Street, Manhattan) New York City, NY 10036",
+  MAP_POSITION: { lat: 40.75956430053791, lng: -73.99213721128423 },
+};
+
 export const RESTAURANT_TIMINGS = [
   "11:30 AM",
   "12:00 PM",

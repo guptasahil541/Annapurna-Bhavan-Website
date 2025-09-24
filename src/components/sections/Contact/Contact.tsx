@@ -1,8 +1,11 @@
 import classNames from "classnames";
+import Link from "next/link";
 
 import { CTA, GoogleMap, ContentFrame } from "@/components/ui";
 
 import styles from "./Contact.module.css";
+
+import { CONTACT_INFO } from "@/constants/contact";
 
 export const Contact = () => {
   return (
@@ -14,18 +17,23 @@ export const Contact = () => {
             <div className={styles.contact_info_outer_container}>
               <div className={styles.contact_info_inner_container}>
                 <h3>Address</h3>
-                <p className={styles.info}>
-                  615 9th Avenue (Between 43rd & 44th Street, Manhattan) New
-                  York City, NY 10036
-                </p>
+                <p className={styles.info}>{CONTACT_INFO.ADDRESS}</p>
               </div>
               <div className={styles.contact_info_inner_container}>
                 <h3>Call us</h3>
-                <p className={styles.info}>212-981-7000 </p>
+                <p className={styles.info}>
+                  <Link href={`tel:${CONTACT_INFO.PHONE}`}>
+                    {CONTACT_INFO.PHONE}
+                  </Link>
+                </p>
               </div>
               <div className={styles.contact_info_inner_container}>
                 <h3>Mail us</h3>
-                <p className={styles.info}>annapurnabhawan@gmail.com</p>
+                <p className={styles.info}>
+                  <Link href={`mailto:${CONTACT_INFO.EMAIL}`}>
+                    {CONTACT_INFO.EMAIL}
+                  </Link>
+                </p>
               </div>
             </div>
             <div className={styles.restaurant_timings_outer_container}>

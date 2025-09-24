@@ -4,14 +4,16 @@ import { APIProvider, Map, AdvancedMarker } from "@vis.gl/react-google-maps";
 
 import styles from "./GoogleMap.module.css";
 
+import { CONTACT_INFO } from "@/constants/contact";
+
 export const GoogleMap = () => {
-  const position = { lat: 28.67507146622031, lng: 77.10374507570099 };
+  const position = CONTACT_INFO.MAP_POSITION;
 
   return (
     <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}>
       <div className={styles.map}>
         <Map
-          defaultZoom={15}
+          defaultZoom={18}
           defaultCenter={position}
           mapId={process.env.NEXT_PUBLIC_GOOGLE_MAP_ID}
           gestureHandling="greedy"

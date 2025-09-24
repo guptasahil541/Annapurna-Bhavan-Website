@@ -9,7 +9,7 @@ import { Button } from "@/components";
 
 import styles from "./Form.module.css";
 
-import { RESTAURANT_TIMINGS } from "@/constants/timings";
+import { RESTAURANT_TIMINGS } from "@/constants/contact";
 
 export const Form = () => {
   const {
