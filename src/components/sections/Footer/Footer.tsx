@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import classNames from "classnames";
 
 import styles from "./Footer.module.css";
@@ -10,7 +11,17 @@ export const Footer = () => {
     <footer id={styles.footer}>
       <div className={classNames("container", styles.footer_container)}>
         <div className={styles.footer_top_container}>
-          <div className={styles.footer_logo_container}></div>
+          <div className={styles.footer_logo_container}>
+            <Link href="/">
+              <Image
+                src="/logo-desktop.svg"
+                height={35}
+                width={275}
+                quality={100}
+                alt="Annapurna Bhavan Logo"
+              />
+            </Link>
+          </div>
           <div className={styles.footer_navigation_outer_container}>
             <div className={styles.footer_navigation_inner_container}>
               <span className={styles.footer_navigation_heading}>
