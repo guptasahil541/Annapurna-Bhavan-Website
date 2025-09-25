@@ -4,6 +4,7 @@ import { FormFields, formSchema } from "./types";
 
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "react-hot-toast";
 
 import { Button } from "@/components";
 
@@ -15,13 +16,16 @@ export const Form = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, isSubmitting },
   } = useForm<FormFields>({
     resolver: zodResolver(formSchema),
   });
 
   const onSubmit: SubmitHandler<FormFields> = (data) => {
+    toast.success("Table booking request created successfully!");
     console.log(data);
+    reset();
   };
 
   return (
@@ -35,6 +39,11 @@ export const Form = () => {
             placeholder="Enter first name"
             {...register("firstName")}
           />
+          {errors.firstName && (
+            <p className={styles.form_input_error}>
+              {errors.firstName.message}
+            </p>
+          )}
         </div>
         <div className={styles.form_input_container}>
           <label htmlFor="lastName">Last Name</label>
@@ -44,6 +53,9 @@ export const Form = () => {
             placeholder="Enter last name"
             {...register("lastName")}
           />
+          {errors.lastName && (
+            <p className={styles.form_input_error}>{errors.lastName.message}</p>
+          )}
         </div>
       </div>
       <div className={styles.form_inputs_container}>
@@ -55,6 +67,9 @@ export const Form = () => {
             placeholder="Enter email"
             {...register("email")}
           />
+          {errors.email && (
+            <p className={styles.form_input_error}>{errors.email.message}</p>
+          )}
         </div>
         <div className={styles.form_input_container}>
           <label htmlFor="phone">Phone number (US)*</label>
@@ -64,6 +79,9 @@ export const Form = () => {
             placeholder="Enter phone number"
             {...register("phone")}
           />
+          {errors.phone && (
+            <p className={styles.form_input_error}>{errors.phone.message}</p>
+          )}
         </div>
       </div>
       <div className={styles.form_inputs_container}>
@@ -75,6 +93,9 @@ export const Form = () => {
             placeholder="Enter guests"
             {...register("guests")}
           />
+          {errors.guests && (
+            <p className={styles.form_input_error}>{errors.guests.message}</p>
+          )}
         </div>
         <div className={styles.form_input_container}>
           <label htmlFor="date">Date*</label>
@@ -84,6 +105,9 @@ export const Form = () => {
             placeholder="Enter date"
             {...register("date")}
           />
+          {errors.date && (
+            <p className={styles.form_input_error}>{errors.date.message}</p>
+          )}
         </div>
         <div className={styles.form_input_container}>
           <label htmlFor="time">Time*</label>
@@ -99,6 +123,9 @@ export const Form = () => {
               );
             })}
           </select>
+          {errors.time && (
+            <p className={styles.form_input_error}>{errors.time.message}</p>
+          )}
         </div>
       </div>
       <div className={styles.form_inputs_container}>
@@ -110,10 +137,15 @@ export const Form = () => {
             {...register("instructions")}
             rows={4}
           />
+          {errors.instructions && (
+            <p className={styles.form_input_error}>
+              {errors.instructions.message}
+            </p>
+          )}
         </div>
       </div>
-      <Button type="submit" buttonFill="redOutline">
-        Book table
+      <Button disabled={isSubmitting} type="submit" buttonFill="redOutline">
+        {isSubmitting ? "Booking" : "Book table"}
       </Button>
     </form>
   );
