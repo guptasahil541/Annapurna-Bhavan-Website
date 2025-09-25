@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { Toaster } from "react-hot-toast";
+
 import { Overlock, Mozilla_Headline } from "next/font/google";
 
 import { Footer } from "@/components";
@@ -36,6 +38,7 @@ export default function RootLayout({
       <body>
         {children}
         <Footer />
+        <Toaster position="top-center" />
       </body>
     </html>
   );

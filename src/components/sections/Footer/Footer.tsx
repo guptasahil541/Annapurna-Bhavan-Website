@@ -17,7 +17,6 @@ export const Footer = () => {
                 src="/logo-desktop.svg"
                 height={35}
                 width={275}
-                quality={100}
                 alt="Annapurna Bhavan Logo"
               />
             </Link>

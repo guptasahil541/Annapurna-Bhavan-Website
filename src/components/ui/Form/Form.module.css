@@ -53,6 +53,11 @@
   padding-block: 1.1rem;
 }
 
+.form_input_error {
+  color: var(--red);
+  font-family: var(--font-overlock);
+}
+
 @media (max-width: 728px) {
   .form {
     gap: 2rem;
