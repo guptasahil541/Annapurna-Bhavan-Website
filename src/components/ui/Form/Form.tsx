@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "react-hot-toast";
 
 import { Button } from "@/components";
+import { bookTable } from "@/app/actions/bookTable";
 
 import styles from "./Form.module.css";
 
@@ -22,10 +23,15 @@ export const Form = () => {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit: SubmitHandler<FormFields> = (data) => {
-    toast.success("Table booking request created successfully!");
-    console.log(data);
-    reset();
+  const onSubmit: SubmitHandler<FormFields> = async (data) => {
+    try {
+      const res = await bookTable(data);
+      toast.success("Booking request created successfully");
+      reset();
+    } catch (error) {
+      console.log(error);
+      toast.error("Failed to create booking request");
+    }
   };
 
   return (
