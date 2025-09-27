@@ -10,6 +10,8 @@ export * from "./Form/TableReservationForm";
 
 export * from "./Form/CateringForm";
 
+export * from "./Form/ContactForm";
+
 export * from "./ImageGallery/ImageGallery";
 
 export * from "./ContentFrame/ContentFrame";

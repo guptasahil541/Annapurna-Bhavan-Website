@@ -1,6 +1,7 @@
 .content_container {
   display: flex;
   width: 100%;
+  justify-content: space-between;
   gap: clamp(3rem, 7vw, 25rem);
 }
 
@@ -9,6 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 3rem;
+  width: 60%;
 }
 
 .side_image {
@@ -16,24 +18,28 @@
   width: 100%;
 }
 
-.sub_info_container {
+.contact_info_outer_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact_info_inner_container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.sub_info_heading {
-  font-size: 3rem;
-  color: var(--foreground);
-  font-family: var(--font-overlock);
-}
-
-.sub_info_text {
-  color: var(--brown);
+.info a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 1024px) {
   .content_container {
     flex-direction: column-reverse;
+  }
+
+  .form_container {
+    width: 100%;
   }
 }

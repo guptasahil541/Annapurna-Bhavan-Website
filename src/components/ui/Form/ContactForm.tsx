@@ -1,35 +1,33 @@
 "use client";
 
-import { FormFields, formSchema } from "./types";
+import { ContactFormFields, contactFormSchema } from "./types";
 
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "react-hot-toast";
 
 import { Button } from "@/components";
-import { bookTable } from "@/app/actions/bookTable";
+import { contactUs } from "@/app/actions/contactUs";
 
 import styles from "./Form.module.css";
 
-import { RESTAURANT_TIMINGS } from "@/constants/contact";
-
-export const TableReservationForm = () => {
+export const ContactForm = () => {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<FormFields>({
-    resolver: zodResolver(formSchema),
+  } = useForm<ContactFormFields>({
+    resolver: zodResolver(contactFormSchema),
   });
 
-  const onSubmit: SubmitHandler<FormFields> = async (data) => {
+  const onSubmit: SubmitHandler<ContactFormFields> = async (data) => {
     try {
-      await bookTable(data);
-      toast.success("Booking request created successfully");
+      await contactUs(data);
+      toast.success("Message sent successfully");
       reset();
     } catch (error) {
-      toast.error("Failed to create booking request");
+      toast.error("Failed to send message");
     }
   };
 
@@ -91,66 +89,20 @@ export const TableReservationForm = () => {
       </div>
       <div className={styles.form_inputs_container}>
         <div className={styles.form_input_container}>
-          <label htmlFor="guests">Number of guests*</label>
-          <input
-            id="guests"
-            type="text"
-            placeholder="Enter guests"
-            {...register("guests")}
-          />
-          {errors.guests && (
-            <p className={styles.form_input_error}>{errors.guests.message}</p>
-          )}
-        </div>
-        <div className={styles.form_input_container}>
-          <label htmlFor="date">Date*</label>
-          <input
-            id="date"
-            type="date"
-            placeholder="Enter date"
-            {...register("date")}
-          />
-          {errors.date && (
-            <p className={styles.form_input_error}>{errors.date.message}</p>
-          )}
-        </div>
-        <div className={styles.form_input_container}>
-          <label htmlFor="time">Time*</label>
-          <select id="time" defaultValue="" {...register("time")}>
-            <option value="" disabled>
-              Choose time
-            </option>
-            {RESTAURANT_TIMINGS.map((timing, index) => {
-              return (
-                <option value={timing} key={index}>
-                  {timing}
-                </option>
-              );
-            })}
-          </select>
-          {errors.time && (
-            <p className={styles.form_input_error}>{errors.time.message}</p>
-          )}
-        </div>
-      </div>
-      <div className={styles.form_inputs_container}>
-        <div className={styles.form_input_container}>
-          <label htmlFor="instructions">Special instructions</label>
+          <label htmlFor="message">Message*</label>
           <textarea
-            id="instructions"
-            placeholder="Enter special instructions"
-            {...register("instructions")}
+            id="message"
+            placeholder="Enter message"
+            {...register("message")}
             rows={4}
           />
-          {errors.instructions && (
-            <p className={styles.form_input_error}>
-              {errors.instructions.message}
-            </p>
+          {errors.message && (
+            <p className={styles.form_input_error}>{errors.message.message}</p>
           )}
         </div>
       </div>
       <Button disabled={isSubmitting} type="submit" buttonFill="redOutline">
-        {isSubmitting ? "Booking" : "Book table"}
+        {isSubmitting ? "Sending message" : "Send message"}
       </Button>
     </form>
   );
