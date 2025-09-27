@@ -13,7 +13,7 @@ import styles from "./Form.module.css";
 
 import { RESTAURANT_TIMINGS } from "@/constants/contact";
 
-export const Form = () => {
+export const CateringForm = () => {
   const {
     register,
     handleSubmit,
@@ -26,11 +26,11 @@ export const Form = () => {
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
     try {
       const res = await bookTable(data);
-      toast.success("Booking request created successfully");
+      toast.success("Catering request created successfully");
       reset();
     } catch (error) {
       console.log(error);
-      toast.error("Failed to create booking request");
+      toast.error("Failed to create catering request");
     }
   };
 
@@ -151,7 +151,7 @@ export const Form = () => {
         </div>
       </div>
       <Button disabled={isSubmitting} type="submit" buttonFill="redOutline">
-        {isSubmitting ? "Booking" : "Book table"}
+        {isSubmitting ? "Booking" : "Book catering"}
       </Button>
     </form>
   );

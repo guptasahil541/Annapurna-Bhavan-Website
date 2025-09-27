@@ -12,8 +12,8 @@ export const QUICK_LINKS = [
     path: "/",
   },
   {
-    name: "Book a table",
-    path: "/",
+    name: "Catering",
+    path: "/book/catering",
   },
   {
     name: "Contact us",
