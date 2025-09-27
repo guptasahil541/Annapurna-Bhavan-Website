@@ -17,10 +17,15 @@ export const buttonVariants = cva(styles.default_button, {
       full: styles.full_radius_button,
       partial: styles.partial_radius_button,
     },
+    buttonSize: {
+      small: styles.small_button,
+      medium: styles.medium_button,
+    },
   },
   defaultVariants: {
     buttonFill: "red",
     buttonBorderRadius: "partial",
+    buttonSize: "medium",
   },
 });
 

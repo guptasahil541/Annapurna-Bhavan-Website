@@ -7,13 +7,14 @@ export const Button: FC<ButtonProps> = ({
   className,
   buttonFill,
   buttonBorderRadius,
+  buttonSize,
   ...props
 }) => {
   return (
     <button
       className={classNames(
         className,
-        buttonVariants({ buttonFill, buttonBorderRadius })
+        buttonVariants({ buttonFill, buttonBorderRadius, buttonSize })
       )}
       {...props}
     />

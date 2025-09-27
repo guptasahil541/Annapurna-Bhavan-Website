@@ -4,7 +4,7 @@ import { Toaster } from "react-hot-toast";
 
 import { Overlock, Mozilla_Headline } from "next/font/google";
 
-import { Footer } from "@/components";
+import { Footer, Navbar } from "@/components";
 
 import "./globals.css";
 
@@ -36,6 +36,7 @@ export default function RootLayout({
       className={`${overlock.variable} ${mozillaHeadline.variable}`}
     >
       <body>
+        <Navbar />
         {children}
         <Footer />
         <Toaster position="top-center" />
