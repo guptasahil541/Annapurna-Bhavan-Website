@@ -6,8 +6,12 @@ export * from "./Menu/Menu";
 
 export * from "./GoogleMap/GoogleMap";
 
-export * from "./Form/Form";
+export * from "./Form/TableReservationForm";
+
+export * from "./Form/CateringForm";
 
 export * from "./ImageGallery/ImageGallery";
 
 export * from "./ContentFrame/ContentFrame";
+
+export * from "./Hero/Hero";

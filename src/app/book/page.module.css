@@ -30,24 +30,24 @@
   height: clamp(50rem, 70vw, 80rem);
 }
 
-.book_a_table_image {
+.side_image {
   height: 100%;
   width: 100%;
 }
 
-.cancellation_policy_container {
+.sub_info_container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.cancellation_heading {
+.sub_info_heading {
   font-size: 3rem;
   color: var(--foreground);
   font-family: var(--font-overlock);
 }
 
-.cancellation_text {
+.sub_info_text {
   color: var(--brown);
 }
 

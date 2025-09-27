@@ -1,7 +1,6 @@
-import Image from "next/image";
 import classNames from "classnames";
 
-import { ImageGallery, Menu } from "@/components";
+import { Hero, ImageGallery, Menu } from "@/components";
 
 import styles from "../page.module.css";
 
@@ -14,16 +13,15 @@ import { DRINK_IMAGES } from "@/constants/gallery";
 export default function DrinksMenu() {
   return (
     <main>
-      <section id={styles.hero}>
-        <Image
-          src="https://images.unsplash.com/photo-1656936632096-59fcacae533f?q=80&w=5070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Hero image"
-          height={1080}
-          width={1920}
-          priority={true}
-          className={styles.hero_image}
-        />
-      </section>
+      <Hero
+        imageSrc="https://images.unsplash.com/photo-1656936632096-59fcacae533f?q=80&w=5070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        altText="Hero background image"
+        height={1080}
+        width={1920}
+        containerHeight="60svh"
+      >
+        <h1>Drinks Menu</h1>
+      </Hero>
       <section id={styles.menu} className="vertical_padding">
         <div className={classNames("container", styles.menu_container)}>
           <Menu
@@ -33,7 +31,7 @@ export default function DrinksMenu() {
             buttonFill="darkRedOutline"
             buttonBorderRadius="full"
             ctaButtonFill="red"
-            ctaButtonLink="/book-a-table"
+            ctaButtonLink="/book/table"
             ctaButtonText="Book a table"
           />
         </div>

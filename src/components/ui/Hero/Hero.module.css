@@ -1,5 +1,4 @@
 #hero {
-  height: 100svh;
   position: relative;
 }
 
@@ -25,10 +24,10 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgba(20, 0, 0, 0.7) 15%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(rgba(20, 0, 0, 0.75) 30%, rgba(0, 0, 0, 0) 100%);
 }
 
-.hero_container {
+.hero_content_container {
   height: 100%;
   display: flex;
   flex-direction: column;
