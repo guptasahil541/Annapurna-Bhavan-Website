@@ -17,7 +17,7 @@ export default function BookATable() {
       >
         <h1>Book A Table</h1>
       </Hero>
-      <div
+      <section
         className={classNames(
           "container vertical_padding",
           styles.booking_container
@@ -44,7 +44,7 @@ export default function BookATable() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

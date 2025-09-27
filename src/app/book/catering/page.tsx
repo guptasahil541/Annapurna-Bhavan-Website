@@ -17,7 +17,7 @@ export default function BookCatering() {
       >
         <h1>Book Catering</h1>
       </Hero>
-      <div
+      <section
         className={classNames(
           "container vertical_padding",
           styles.booking_container
@@ -44,7 +44,7 @@ export default function BookCatering() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import { FormFields } from "@/components/ui/Form/types";
+import { ContactFormFields } from "@/components/ui/Form/types";
 
 import {
   Tailwind,
@@ -16,19 +16,16 @@ import {
 
 import { CONTACT_INFO } from "@/constants/contact";
 
-interface ReservationProps extends FormFields {
+interface ReservationProps extends ContactFormFields {
   forAdminPurpose?: boolean;
 }
 
-export default function TableReservation({
+export default function ContactUs({
   firstName,
   lastName,
   email,
   phone,
-  guests,
-  date,
-  time,
-  instructions,
+  message,
   forAdminPurpose = false,
 }: ReservationProps) {
   return (
@@ -64,15 +61,15 @@ export default function TableReservation({
                   Dear {firstName},
                 </Text>
                 <Text className="text-gray-600 leading-relaxed mb-4">
-                  Thank you for your interest in dining at Annapurna Bhavan! We
-                  have received your table booking request and our team is
-                  currently reviewing the availability for your requested date
-                  and time.
+                  Thank you for reaching out to Annapurna Bhavan! We have
+                  received your message and appreciate you taking the time to
+                  contact us. Our team will review your inquiry and get back to
+                  you as soon as possible.
                 </Text>
-                <div className="bg-amber-50 px-6 py-4 mb-6 rounded-r-lg">
-                  <Text className="text-amber-700 text-sm m-0">
-                    We will contact you shortly to confirm your reservation or
-                    suggest alternative times if needed.
+                <div className="bg-green-50 px-6 py-4 mb-6 rounded-r-lg">
+                  <Text className="text-green-700 text-sm m-0">
+                    We typically respond to all inquiries within 24 hours during
+                    business days.
                   </Text>
                 </div>
               </Section>
@@ -80,7 +77,7 @@ export default function TableReservation({
             <Section className="bg-gray-50 rounded-lg px-6 py-6">
               <div className="flex justify-between items-center py-2 border-b border-gray-200">
                 <span className="font-medium text-gray-600 min-w-36">
-                  Guest Name:
+                  Name:
                 </span>
                 <span className="text-gray-800">
                   {firstName} {lastName}
@@ -98,44 +95,28 @@ export default function TableReservation({
                 </span>
                 <span className="text-gray-800">{phone}</span>
               </div>
-              <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                <span className="font-medium text-gray-600 min-w-36">
-                  Requested Date:
-                </span>
-                <span className="text-gray-800">{date}</span>
-              </div>
-              <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                <span className="font-medium text-gray-600 min-w-36">
-                  Requested Time:
-                </span>
-                <span className="text-gray-800">{time}</span>
-              </div>
-              <div className="flex justify-between items-center py-2">
-                <span className="font-medium text-gray-600 min-w-36">
-                  Party Size:
-                </span>
-                <span className="text-gray-800">
-                  {guests} {parseInt(guests) === 1 ? "guest" : "guests"}
-                </span>
+            </Section>
+            <Section className="bg-slate-50 border border-slate-200 rounded-lg px-4 py-4 mt-5">
+              <h4 className="m-0 mb-3 text-slate-800 text-sm font-semibold uppercase tracking-wide">
+                Message
+              </h4>
+              <div className="bg-white border border-slate-200 rounded p-4">
+                <Text className="m-0 text-slate-700 leading-relaxed whitespace-pre-wrap">
+                  {message}
+                </Text>
               </div>
             </Section>
-            {instructions && (
-              <Section className="bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-4 mt-5">
-                <h4 className="m-0 mb-2 text-yellow-800 text-sm font-semibold uppercase tracking-wide">
-                  Special Instructions
-                </h4>
-                <Text className="m-0 text-yellow-800 italic">
-                  {instructions}
-                </Text>
-              </Section>
-            )}
             {!forAdminPurpose && (
               <Section>
                 <Text className="text-gray-600 leading-relaxed">
-                  In the meantime, feel free to browse our menu on our website
-                  or contact us if you have any questions about your booking
-                  request. We appreciate your patience and look forward to
-                  hosting you soon!
+                  We value every customer inquiry and strive to provide helpful,
+                  personalized responses. A member of our team will carefully
+                  review your message and respond with the information you've
+                  requested.
+                </Text>
+                <Text className="text-gray-600 leading-relaxed">
+                  If your inquiry is urgent or time-sensitive, please feel free
+                  to call us directly at the number below.
                 </Text>
                 <Hr />
                 <Section className="bg-blue-50 rounded-lg px-6 py-6 my-6">
@@ -167,9 +148,9 @@ export default function TableReservation({
                 </Section>
                 <Section className="text-center py-5 px-5 bg-gray-50 rounded-lg my-6">
                   <Text className="text-gray-600 m-0">
-                    Questions about your booking request? Contact us directly
-                    and we'll be happy to assist you. Thank you for choosing
-                    Annapurna Bhavan
+                    Thank you for your interest in Annapurna Bhavan. We look
+                    forward to connecting with you soon and hope to welcome you
+                    to our restaurant!
                   </Text>
                 </Section>
               </Section>

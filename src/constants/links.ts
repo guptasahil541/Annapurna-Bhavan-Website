@@ -17,7 +17,7 @@ export const QUICK_LINKS = [
   },
   {
     name: "Contact us",
-    path: "/",
+    path: "/contact-us",
   },
 ];
 

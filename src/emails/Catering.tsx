@@ -20,7 +20,7 @@ interface ReservationProps extends FormFields {
   forAdminPurpose?: boolean;
 }
 
-export default function TableReservation({
+export default function Catering({
   firstName,
   lastName,
   email,
@@ -64,15 +64,15 @@ export default function TableReservation({
                   Dear {firstName},
                 </Text>
                 <Text className="text-gray-600 leading-relaxed mb-4">
-                  Thank you for your interest in dining at Annapurna Bhavan! We
-                  have received your table booking request and our team is
-                  currently reviewing the availability for your requested date
-                  and time.
+                  Thank you for considering Annapurna Bhavan for your catering
+                  needs! We have received your catering request and our catering
+                  team is currently reviewing your requirements and checking
+                  availability for your event.
                 </Text>
                 <div className="bg-amber-50 px-6 py-4 mb-6 rounded-r-lg">
                   <Text className="text-amber-700 text-sm m-0">
-                    We will contact you shortly to confirm your reservation or
-                    suggest alternative times if needed.
+                    Our catering coordinator will contact you shortly with a
+                    custom quote and menu options for your event.
                   </Text>
                 </div>
               </Section>
@@ -120,11 +120,11 @@ export default function TableReservation({
               </div>
             </Section>
             {instructions && (
-              <Section className="bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-4 mt-5">
-                <h4 className="m-0 mb-2 text-yellow-800 text-sm font-semibold uppercase tracking-wide">
-                  Special Instructions
+              <Section className="bg-purple-50 border border-yellow-200 rounded-lg px-4 py-4 mt-5">
+                <h4 className="m-0 mb-2 text-purple-800 text-sm font-semibold uppercase tracking-wide">
+                  Special Requirements
                 </h4>
-                <Text className="m-0 text-yellow-800 italic">
+                <Text className="m-0 text-purple-800 italic">
                   {instructions}
                 </Text>
               </Section>
@@ -132,10 +132,10 @@ export default function TableReservation({
             {!forAdminPurpose && (
               <Section>
                 <Text className="text-gray-600 leading-relaxed">
-                  In the meantime, feel free to browse our menu on our website
-                  or contact us if you have any questions about your booking
-                  request. We appreciate your patience and look forward to
-                  hosting you soon!
+                  Our catering team will prepare a customized proposal based on
+                  your requirements, including menu suggestions, pricing, and
+                  service options. We'll also discuss delivery, setup, and any
+                  additional services you may need to make your event memorable.
                 </Text>
                 <Hr />
                 <Section className="bg-blue-50 rounded-lg px-6 py-6 my-6">
@@ -167,9 +167,9 @@ export default function TableReservation({
                 </Section>
                 <Section className="text-center py-5 px-5 bg-gray-50 rounded-lg my-6">
                   <Text className="text-gray-600 m-0">
-                    Questions about your booking request? Contact us directly
-                    and we'll be happy to assist you. Thank you for choosing
-                    Annapurna Bhavan
+                    Have questions about our catering services or need to
+                    discuss your event in detail? Feel free to contact us
+                    directly. We look forward to making your event delicious!
                   </Text>
                 </Section>
               </Section>

@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "react-hot-toast";
 
 import { Button } from "@/components";
-import { bookTable } from "@/app/actions/bookTable";
+import { catering } from "@/app/actions/catering";
 
 import styles from "./Form.module.css";
 
@@ -25,7 +25,7 @@ export const CateringForm = () => {
 
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
     try {
-      const res = await bookTable(data);
+      await catering(data);
       toast.success("Catering request created successfully");
       reset();
     } catch (error) {
@@ -52,7 +52,7 @@ export const CateringForm = () => {
           )}
         </div>
         <div className={styles.form_input_container}>
-          <label htmlFor="lastName">Last Name</label>
+          <label htmlFor="lastName">Last Name*</label>
           <input
             id="lastName"
             type="text"
