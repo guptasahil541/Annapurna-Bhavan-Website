@@ -1,6 +1,5 @@
 .default_button {
   font-family: var(--font-overlock);
-  padding: 1.5rem 3rem;
   font-size: 2rem;
   width: max-content;
   border: none;
@@ -81,8 +80,23 @@ button:disabled {
   color: var(--foreground);
 }
 
+.small_button {
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+}
+
+.medium_button {
+  padding: 1.5rem 3rem;
+  font-size: 2rem;
+}
+
 @media (max-width: 728px) {
-  .default_button {
+  .small_button {
+    padding: 0.8rem 1.4rem;
+    font-size: 1.6rem;
+  }
+
+  .medium_button {
     padding: 1rem 2rem;
     font-size: 1.8rem;
   }

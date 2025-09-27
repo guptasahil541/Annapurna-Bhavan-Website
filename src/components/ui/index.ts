@@ -17,3 +17,5 @@ export * from "./ImageGallery/ImageGallery";
 export * from "./ContentFrame/ContentFrame";
 
 export * from "./Hero/Hero";
+
+export * from "./Navbar/Navbar";
